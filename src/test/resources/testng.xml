@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Jargon File Operation Tests" verbose="2" thread-count="1" parallel="false">
+	<test name="systems">
+		<packages>
+			<package name="org.iplantc.service.transfer.irods4" />
+		</packages>
+	</test>
+</suite>

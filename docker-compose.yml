@@ -1,0 +1,28 @@
+sut:
+  build: .
+  command: mvn clean test
+  environment:
+    IRODS_HOST: irods 
+    IRODS_PORT: 1247
+    IRODS_USERNAME: testuser
+    IRODS_PASSWORD: testuser
+    IRODS_RESOURCE: demoResc
+    IRODS_ZONE: iplant 
+  links: 
+    - irods4:irods
+  volumes:
+    - .:/sources
+irods4:
+  image: agaveapi/irods:4.0.3
+  command: changeit
+  hostname: docker.example.com
+  environment:
+    - 'DOCKER_HOSTNAME=docker.example.com'
+    - 'IRODS_ZONE=iplant'
+  ports:
+    - '1247'
+#irods3:
+#  image: agaveapi/irods:3.3.1
+#  hostname: docker.example.com
+#  ports:
+#    - '1247'
