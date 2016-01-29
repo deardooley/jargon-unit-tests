@@ -13,7 +13,8 @@ import org.testng.annotations.BeforeClass;
 
 public class IrodsBaseTestCase {
 
-    public static String SPECIAL_CHARS = "&";
+    public static String SPECIAL_CHARS = " _-!@#$%^&*()+[]{}:.";
+    
     protected ThreadLocal<IRODS4> threadClient = new ThreadLocal<IRODS4>();
 
     public IrodsBaseTestCase() {
