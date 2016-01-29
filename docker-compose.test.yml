@@ -1,6 +1,7 @@
 sut:
   build: .
   command: mvn clean test
+  privileged: true
   environment:
     IRODS_HOST: irods 
     IRODS_PORT: 1247
